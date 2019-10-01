@@ -20,7 +20,7 @@ import './App.css';
 import AxiosTest from './AxiosTest'; //ejemplo con high order component with styles 
 
 function Index() {
-  return <><h2>Home 456</h2><AxiosTest/></>;
+  return <><h2>Home</h2><AxiosTest/></>;
 }
 
 function About() {
