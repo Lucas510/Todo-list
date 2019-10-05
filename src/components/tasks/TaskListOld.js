@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropType from'prop-types';
 import axios from 'axios';
@@ -8,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 
-class AxiosTest extends React.Component {
+class TaskListOld extends React.Component {
 
 	state = {
 		count: 0,
@@ -17,11 +16,12 @@ class AxiosTest extends React.Component {
 	}
  componentDidMount() {
  	console.log('componentDidMount');
-	axios.get('https://swapi.co/api/people')
+	//axios.get('https://swapi.co/api/people')
+  axios.get('ws/rest/tasks')
 	.then(res => {
 		console.log('dentro del then');
 		console.log(res);
-		this.setState({ people: res.data.results });
+		this.setState({ people: res.data });
 	});
 	console.log('fuera del then -> $(this.state.people}');
  }
@@ -73,7 +73,7 @@ render() {
           <ListItem key={p.name}>
             <ListItemText
             primary={p.name}
-            secondary={p.gender}
+            secondary={p.type.description}
             />
           </ListItem> 
         )
@@ -85,4 +85,4 @@ render() {
   }
 }
 
-export default AxiosTest;
+export default TaskListOld;

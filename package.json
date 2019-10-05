@@ -1,13 +1,15 @@
 {
   "name": "todo-list",
+  "proxy": "http://localhost:8080/",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "@material-ui/core": "^4.4.3",
     "@material-ui/icons": "^4.4.3",
     "axios": "^0.19.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-moment": "0.9.3",
     "react-router-dom": "^5.1.0",
     "react-scripts": "3.1.2"
   },
@@ -31,5 +33,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26",
+    "react-moment": "^0.9.3",
+    "semantic-ui-react": "^0.88.1"
   }
 }
